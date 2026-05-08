@@ -1,0 +1,8 @@
+# Fall Detection Project — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Computer vision — frame capture, drawing, video writing
+opencv-python>=4.8.0
+
+# YOLOv8 pose estimation (includes torch, torchvision as transitive deps)
+ultralytics>=8.0.0
