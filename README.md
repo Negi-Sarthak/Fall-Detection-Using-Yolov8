@@ -102,41 +102,6 @@ fall_detection_project/
 
 ---
 
-## 🚀 Jetson Nano Setup
-
-### 1. Flash JetPack
-
-Download and flash **JetPack 4.6** to your microSD using [NVIDIA SDK Manager](https://developer.nvidia.com/sdk-manager) or [Balena Etcher](https://www.balena.io/etcher/).
-
-### 2. Set Power Mode to Maximum
-
-```bash
-sudo nvpmodel -m 0          # 10W mode (all 4 cores)
-sudo jetson_clocks          # Lock clocks to maximum frequency
-```
-
-### 3. Expand Swap (Recommended)
-
-```bash
-sudo fallocate -l 4G /var/swapfile
-sudo chmod 600 /var/swapfile
-sudo mkswap /var/swapfile
-sudo swapon /var/swapfile
-```
-
-Add to `/etc/fstab` for persistence:
-```
-/var/swapfile swap swap defaults 0 0
-```
-
-### 4. Update System Packages
-
-```bash
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install -y python3-pip python3-dev libopencv-dev
-```
-
----
 
 ## 📦 Installation
 
