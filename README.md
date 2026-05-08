@@ -11,7 +11,6 @@ Real-time human fall detection system powered by **YOLOv8 Pose Estimation**, des
 - [Project Structure](#project-structure)
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
-- [Jetson Nano Setup](#jetson-nano-setup)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
