@@ -1,10 +1,10 @@
-# 🛡️ Fall Detection — Edge AI on Jetson Nano
+#  Fall Detection — Edge AI on Jetson Nano
 
 Real-time human fall detection system powered by **YOLOv8 Pose Estimation**, designed and optimized to run on the **NVIDIA Jetson Nano**. The system processes live webcam or pre-recorded video feeds, detects falls using skeletal keypoint analysis, and automatically saves annotated video clips with a timestamped log.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [How It Works](#how-it-works)
@@ -19,7 +19,7 @@ Real-time human fall detection system powered by **YOLOv8 Pose Estimation**, des
 
 ---
 
-## ✨ Features
+##  Features
 
 - 🎯 **Real-time pose estimation** using YOLOv8n-pose (nano variant for edge efficiency)
 - 🔍 **Keypoint-based fall detection** — no dataset training required
@@ -31,7 +31,7 @@ Real-time human fall detection system powered by **YOLOv8 Pose Estimation**, des
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ```
 Camera / Video
@@ -54,7 +54,7 @@ Fall Logic
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 fall_detection_project/
@@ -75,7 +75,7 @@ fall_detection_project/
 
 ---
 
-## 🔧 Hardware Requirements
+##  Hardware Requirements
 
 | Component | Minimum Spec |
 |---|---|
@@ -85,11 +85,11 @@ fall_detection_project/
 | **Power** | 5V 4A barrel jack (barrel jack mode recommended) |
 | **RAM** | 4 GB LPDDR4 (shared with GPU) |
 
-> ⚠️ The Jetson Nano 2 GB variant may struggle with YOLOv8n-pose. Use the 4 GB model for best results.
+>  The Jetson Nano 2 GB variant may struggle with YOLOv8n-pose. Use the 4 GB model for best results.
 
 ---
 
-## 💻 Software Requirements
+##  Software Requirements
 
 | Software | Version |
 |---|---|
@@ -102,7 +102,7 @@ fall_detection_project/
 ---
 
 
-## 📦 Installation
+##  Installation
 
 ### 1. Clone the Repository
 
@@ -117,7 +117,7 @@ cd fall-detection-jetson/fall_detection_project
 pip3 install -r requirements.txt
 ```
 
-> 💡 On Jetson Nano, `opencv-python` from pip may conflict with the system OpenCV. If you face issues, skip it and use the pre-installed system OpenCV:
+>  On Jetson Nano, `opencv-python` from pip may conflict with the system OpenCV. If you face issues, skip it and use the pre-installed system OpenCV:
 > ```bash
 > pip3 install ultralytics
 > ```
@@ -144,7 +144,7 @@ DEVICE = "0"    # Use NVIDIA GPU on Jetson Nano
 
 ---
 
-## ▶️ Usage
+##  Usage
 
 ### Run with Webcam (Live)
 
@@ -166,7 +166,7 @@ Press **`Q`** in the display window to stop the session.
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 All tunable parameters are near the top of their respective files:
 
@@ -181,7 +181,7 @@ All tunable parameters are near the top of their respective files:
 
 ---
 
-## 📤 Output
+##  Output
 
 ### Saved Clips — `clips/`
 
@@ -201,7 +201,7 @@ fall_number, timestamp,           clip_path
 
 ---
 
-## 🧠 Fall Detection Logic
+##  Fall Detection Logic
 
 Fall detection is purely geometry-based — no ML classifier training needed.
 
@@ -220,13 +220,13 @@ This two-condition gate eliminates false positives from fast walking or bending.
 
 ---
 
-## 📄 License
+##  License
 
 This project is intended for academic and research purposes.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) — pose estimation backbone
 - [NVIDIA Jetson](https://developer.nvidia.com/embedded/jetson-nano) — edge AI platform
